@@ -41,7 +41,7 @@ def start_sentiment_analysis(entities: list, contents: list) -> list[str]:
     return results
 
 
-def clean_preds(y_preds):
+def clean_preds(y_preds: list[str]) -> None:
     for i, y in enumerate(y_preds):
         if "positive" in y.lower():
             y_preds[i] = "Positive"
