@@ -5,7 +5,7 @@ from sklearn.metrics import (accuracy_score, classification_report,
                              confusion_matrix)
 
 
-def start_sentiment_analysis(entities: list, contents: list) -> list[str]:
+def start_sentiment_analysis(entities: list[str], contents: list[str]) -> list[str]:
     llm = ChatOpenAI(model="ollama/crewai-llama3.2:latest",
                      base_url="http://localhost:11434")
     
